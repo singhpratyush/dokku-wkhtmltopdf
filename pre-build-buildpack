@@ -5,7 +5,7 @@ APP="$1"; IMAGE="dokku/$APP"
 echo "-----> Installing wkhtmltox ..."
 COMMAND=$(cat <<EOF
 apt-get -y  update 
-apt-get install -y wget xfonts-base xfonts-75dpi libssl1.0-dev openssl libpng12-0
+apt-get install -y wget xfonts-base xfonts-75dpi libssl1.0-dev openssl
 cd /tmp
 wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb
 wget http://se.archive.ubuntu.com/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1_amd64.deb
