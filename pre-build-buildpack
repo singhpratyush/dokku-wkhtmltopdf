@@ -7,9 +7,7 @@ COMMAND=$(cat <<EOF
 apt-get -y  update 
 apt-get install -y wget xfonts-base xfonts-75dpi libssl1.0-dev openssl
 cd /tmp && wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.trusty_amd64.deb
-cd /tmp && tar xf wkhtmltox_0.12.5-1.trusty_amd64.deb
-mv /tmp/wkhtmltox /opt/
-cd /usr/local/bin && ln -s /opt/wkhtmltox/bin/wkhtmltopdf && ln -s /opt/wkhtmltox/bin/wkhtmltoimage
+dpkg -i wkhtmltox_0.12.5-1.trusty_amd64.deb
 echo "-----> wkhtmltox installed!"
 sleep 1 # wait so that docker run has not exited before docker attach
 EOF
